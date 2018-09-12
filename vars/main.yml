@@ -1,0 +1,11 @@
+---
+# vars file for the elasticsearch installer
+elasticsearch__temp_dir: '{{ app__elasticsearch__temp_dir | d(default__elasticsearch__temp_dir) }}'
+elasticsearch__temp_file: '{{ elasticsearch__temp_dir }}/elasticsearch-{{ default__elasticsearch__version }}.deb'
+elasticsearch__checksum: '{{ app__elasticsearch__checksum | d(default__elasticsearch__checksum) }}'
+elasticsearch__checksum_deb: '{{ app__elasticsearch__checksum_deb | d(default__elasticsearch__checksum_deb) }}'
+elasticsearch__version: '{{ app__elasticsearch__version | d(default__elasticsearch__version) }}'
+elasticsearch__download_upstream: '{{ app__elasticsearch__download_upstream | d(default__elasticsearch__download_upstream) }}'
+elasticsearch__download_upstream_deb: '{{ app__elasticsearch__download_upstream_deb | d(default__elasticsearch__download_upstream_deb) }}'
+elasticsearch__config: '{{ app__elasticsearch__config | d(default__elasticsearch__config) }}'
+elasticsearch__home: '{{ app__elasticsearch__home | d(default__elasticsearch__home) }}'

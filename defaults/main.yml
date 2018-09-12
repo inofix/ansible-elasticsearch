@@ -1,0 +1,12 @@
+---
+# defaults file for the elasticsearch installer
+default__elasticsearch__temp_dir: '/tmp/elasticsearch-package-{{ ansible_user_id }}'
+default__elasticsearch__checksum: 'sha1:5150c33ccd104a9ce8b7040eeb5b68cb9ee32a70'
+default__elasticsearch__checksum_deb: 'sha1:2a6c79c936ce6fb66cbde39a2e8e344e8b361dcc'
+default__elasticsearch__version: '2.4.0'
+default__elasticsearch__download_upstream: 'https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/{{ default__elasticsearch__version }}/elasticsearch-{{ default__elasticsearch__version }}.tar.gz'
+default__elasticsearch__download_upstream_deb: 'https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/{{ default__elasticsearch__version }}/elasticsearch-{{ default__elasticsearch__version }}.deb'
+default__elasticsearch__config: ''
+default__elasticsearch__home: '/var/lib/elasticsearch-{{ default__elasticsearch__version }}'
+
+

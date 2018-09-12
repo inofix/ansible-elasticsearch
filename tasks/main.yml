@@ -1,0 +1,22 @@
+---
+# tasks file for the elasticsearch installer
+
+- name: 'Prepare the download location'
+  file:
+    path: '{{ elasticsearch__temp_dir }}'
+    state: directory
+    mode: '0750'
+
+- name: 'Download the .deb package'
+  environment:
+    http_proxy: '{{ http_proxy }}'
+  get_url:
+    url: '{{ elasticsearch__download_upstream_deb }}'
+    dest: '{{ elasticsearch__temp_file }}'
+    checksum: '{{ elasticsearch__checksum_deb }}'
+
+- name: 'Install Elasticsearch'
+  apt:
+    deb: '{{ elasticsearch__temp_file }}'
+  become: true
+
