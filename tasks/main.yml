@@ -20,3 +20,19 @@
     deb: '{{ elasticsearch__temp_file }}'
   become: true
 
+- name: 'Test plugin installation'
+  become: True
+  become_user: '{{ elasticsearch__user }}'
+  shell: ./bin/plugin list | sed -e '1d' -e 's/    - //'
+  args:
+    chdir: '{{ elasticsearch__home }}'
+  register: elasticsearch__plugin_installation_status
+
+- name: 'Install Plugins'
+  become: True
+  become_user: '{{ elasticsearch__user }}'
+  shell: ./bin/plugin install '{{ item }}'
+  args:
+    chdir: '{{ elasticsearch__home }}'
+  with_items: '{{ elasticsearch__plugins | difference(elasticsearch__plugin_installation_status.stdout_lines) }}'
+

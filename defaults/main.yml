@@ -8,5 +8,6 @@ default__elasticsearch__download_upstream: 'https://download.elastic.co/elastics
 default__elasticsearch__download_upstream_deb: 'https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/{{ default__elasticsearch__version }}/elasticsearch-{{ default__elasticsearch__version }}.deb'
 default__elasticsearch__config: ''
 default__elasticsearch__home: '/var/lib/elasticsearch-{{ default__elasticsearch__version }}'
-
+default__elasticsearch__user: 'elasticsearch'
+default__elasticsearch__plugins: []
 
