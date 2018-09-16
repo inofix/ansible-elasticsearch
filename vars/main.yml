@@ -9,3 +9,5 @@ elasticsearch__download_upstream: '{{ app__elasticsearch__download_upstream | d(
 elasticsearch__download_upstream_deb: '{{ app__elasticsearch__download_upstream_deb | d(default__elasticsearch__download_upstream_deb) }}'
 elasticsearch__config: '{{ app__elasticsearch__config | d(default__elasticsearch__config) }}'
 elasticsearch__home: '{{ app__elasticsearch__home | d(default__elasticsearch__home) }}'
+elasticsearch__user: '{{ app__elasticsearch__user | d(default__elasticsearch__user) }}'
+elasticsearch__plugins: '{{ default__elasticsearch__plugins + app__elasticsearch__plugins }}'
