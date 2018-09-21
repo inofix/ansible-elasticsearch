@@ -6,8 +6,9 @@ default__elasticsearch__checksum_deb: 'sha1:2a6c79c936ce6fb66cbde39a2e8e344e8b36
 default__elasticsearch__version: '2.4.0'
 default__elasticsearch__download_upstream: 'https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/{{ default__elasticsearch__version }}/elasticsearch-{{ default__elasticsearch__version }}.tar.gz'
 default__elasticsearch__download_upstream_deb: 'https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/{{ default__elasticsearch__version }}/elasticsearch-{{ default__elasticsearch__version }}.deb'
-default__elasticsearch__config: ''
-default__elasticsearch__home: '/var/lib/elasticsearch-{{ default__elasticsearch__version }}'
+default__elasticsearch__cluster_name: 'my-application'
+default__elasticsearch__home: '/usr/share/elasticsearch'
 default__elasticsearch__user: 'elasticsearch'
+default__elasticsearch__config: '/etc/elasticsearch'
 default__elasticsearch__plugins: []
 
